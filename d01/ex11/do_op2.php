@@ -19,7 +19,7 @@ if (isset($argv) && isset($argv[1])) {
 		else if  ($op == "%")
 			echo ($nbr1 % $nbr2);
 		else
-			echo ("Syntax Error 222");
+			echo ("Syntax Error");
 	}
 	else
 		echo ("Syntax Error");
