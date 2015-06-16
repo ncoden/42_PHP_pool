@@ -8,6 +8,7 @@ All subjects and associated resources are given with exercises.
 
 The exercises given each day require the following notions :
 * j00 : Basics of HTML and CSS
+* j01 : Basics of PHP (algorithm, operations on strings, files)
 
 **Message to 42 students :** You are free to copy, modify and share under your name my exercises. But you will learn nothing, or will have the impression to understand without be able to do it again alone. Be responsible and simply ask for help.
 
