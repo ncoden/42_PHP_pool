@@ -44,19 +44,25 @@ function		compare($ca, $cb) {
 		else
 			return (1);
 	}
-	return ($cb - $ca);
+	return (ord($ca) - ord($cb));
 }
 
 function		ft_sort($a, $b) {
 	$lena = strlen($a);
-	$lenb = strlen($a);
+	$lenb = strlen($b);
 	$len = min($lena, $lenb);
 
+	echo "Compare '$a', '$b'\n";
 	for ($i = 0; $i < $len; $i++) {
 		if (($result = compare($a[$i], $b[$i])) != 0)
+		{
+			echo "'$a[$i]' , '$b[$i]' = $result\n";
 			return ($result);
-		$i++;
+		}
+		else
+			echo "'$a[$i]' , '$b[$i]' equal\n";
 	}
+	echo "$lena , $lenb = ".($lena - $lenb)."\n";
 	return ($lena - $lenb);
 }
 
@@ -71,4 +77,5 @@ if (isset($argv))
 }
 else
 	echo ("\n");
+
 ?>
