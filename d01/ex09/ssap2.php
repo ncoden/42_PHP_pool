@@ -52,17 +52,11 @@ function		ft_sort($a, $b) {
 	$lenb = strlen($b);
 	$len = min($lena, $lenb);
 
-	echo "Compare '$a', '$b'\n";
-	for ($i = 0; $i < $len; $i++) {
+	for ($i = 0; $i < $len; $i++)
+	{
 		if (($result = compare($a[$i], $b[$i])) != 0)
-		{
-			echo "'$a[$i]' , '$b[$i]' = $result\n";
 			return ($result);
-		}
-		else
-			echo "'$a[$i]' , '$b[$i]' equal\n";
 	}
-	echo "$lena , $lenb = ".($lena - $lenb)."\n";
 	return ($lena - $lenb);
 }
 
