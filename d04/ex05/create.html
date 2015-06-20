@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+		<style type = "text/css">
+			html, body {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background-color: #F8F8F8;
+				font-size: 16px;
+				font-family: sans-serif;
+			}
+
+			.zone {
+				width: 22em;
+				margin: 4em auto 0 auto;
+
+				border: 1px solid #BBB;
+				background-color: white;
+				box-shadow: 0 1px .5em rgba(0,0,0,.2);
+				border-radius: .125em;
+			}
+			.subzone {
+				padding: 1em 2em;
+				border-top: 1px solid #BBB;
+				background-color: #FCFCFC;
+			}
+
+			.input {
+				vertical-align: middle;
+				margin: .25em 0;
+				padding: .5em .75em;
+
+				border: 1px solid #BBB;
+				box-shadow: 0 1px .25em rgba(0,0,0,.2) inset;
+				border-radius: .25em;
+			}
+			.input:focus {
+				outline: 0;
+				border: 1px solid #888;
+			}
+			.button {
+				margin: .25em 0;
+				padding: .5em .75em;
+
+				border: 1px solid #3079ed;
+				background-color: #4d90fe;
+				box-shadow: 0 1px .25em rgba(0,0,0,.2);
+				border-radius: .25em;
+
+				color: white;
+				cursor: pointer;
+			}
+			.button:focus {
+				outline: 0;
+			}
+			.button:hover {
+				background-color: #4f9ffe;
+				border: 1px solid #2069dd;
+			}
+			.button:active {
+				background-color: #3d80ee;
+				border: 1px solid #2069dd;
+				box-shadow: 0 1px .25em rgba(0,0,0,.3) inset;
+			}
+			.txt-center {
+				text-align: center;
+			}
+
+			.txt-sub {
+				color: #888;
+				font-size: .8em;
+				text-decoration: none;
+			}
+			.txt-sub:hover {
+				color: #444;
+			}
+
+			.paddings-v {
+				padding: 1em 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<div class = "zone">
+			<form action = "create.php" method = "POST">
+				<div class = "paddings-v">
+					<h1>Créer un compte</h1>
+					Identifiant: <input class = "input" type = "text" name = "login"/><br/>
+					Mot de passe : <input class = "input" type = "password" name = "passwd"/>
+				</div>
+				<div class = "subzone txt-center">
+					<input class = "button" type = "submit" value = "OK"/>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
