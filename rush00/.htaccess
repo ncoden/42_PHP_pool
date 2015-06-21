@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+
+	Options -Multiviews +FollowSymLinks
+
+	RewriteEngine on
+	RewriteCond %{REQUEST_URI} !^/resources/.*
+	RewriteCond %{REQUEST_URI} !^/resources$
+	RewriteRule (.*) index.php?path=$1 [NC,L,QSA]
+
+</IfModule>

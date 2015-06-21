@@ -1,0 +1,206 @@
+
+
+/* ******************************    BASICS    ****************************** */
+
+body {
+	background-color: #EEE;
+	font-family: "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+
+/* ******************************    HEADER    ****************************** */
+
+.header {
+	display: block;
+	line-height: 2.75em;
+	background-color: rgba(0,0,0,.6);
+	color: white;
+}
+
+.header-link {
+	color: white;
+	text-decoration: none;
+}
+
+.title .title-text {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.title.title-h2 {
+	padding: 1em 0;
+}
+.title.title-h2 .title-text {
+	font-weight: 100;
+}
+
+.title.title-h3 {
+	padding: 0 0 1em 0;
+}
+.title.title-h3 .title-text {
+	font-weight: bold;
+}
+
+
+/* ******************************    ZONES     ****************************** */
+
+.zone {
+	margin-top: -1px;
+	border: 1px solid #AAA;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+.zone-white {
+	background-color: white;
+}
+
+.zone-grey {
+	background-color: #EEE;
+}
+
+.zone-box {
+	margin-bottom: 1em;
+	padding: 1em;
+	border-radius: 2px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+}
+
+.zone-paddings {
+	padding: 1em 0;
+}
+
+/* ******************************     FORM     ****************************** */
+
+.form-inline {
+	display: inline-block;
+	margin: 0;
+}
+
+
+/* ******************************    BOUTON    ****************************** */
+
+.button {
+	display: inline-block;
+	vertical-align: middle;
+	padding: .25em .5em;
+	background: #ebebeb;
+	border: 1px solid #b5b5b7;
+	box-shadow: inset 0 1px 1px 0 white;
+	border-radius: 3px;
+	color: #444;
+	font-size: 13px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.button.button-blue {
+	border-top-color: #1992da;
+	border-left-color: #0c75bb;
+	border-right-color: #0c75bb;
+	border-bottom-color: #00589c;
+	background: #117ed2;
+	background: -webkit-gradient(linear,left top,left bottom,from(#37aaea),to(#117ed2));
+	background: -moz-linear-gradient(top,#37aaea,#117ed2);
+	background-image: -webkit-linear-gradient(top,#37aaea 0,#117ed2 100%);
+	background-image: linear-gradient(to bottom,#37aaea 0,#117ed2 100%);
+	color: #FFF;
+
+	box-shadow: 0 1px 1px 0 #6fc5f5 inset;
+}
+
+
+/* ******************************    ARTICLE   ****************************** */
+
+.article {
+	overflow: hidden;
+	border: 1px solid #AAA;
+	background-color: #FFF;
+	box-shadow: 0 0 .25em rgba(0,0,0,.2);
+	border-radius: 2px;
+}
+
+.article-picture {
+	width: 100%;
+}
+.article-about {
+	padding: .5em;
+}
+.article-price {
+	color: #666;
+	font-size: .87em;
+}
+
+/* ******************************     TAGS     ****************************** */
+
+.tag {
+	display: inline-block;
+	vertical-align: middle;
+	padding: .25em .5em;
+	background-color: #444;
+	border: 1px solid #222;
+	border-radius: 2px;
+	color: white;
+	font-size: 12px;
+}
+
+
+/* ******************************     TEXT     ****************************** */
+
+.txt-sub {
+	color: #666;
+	font-size: .87em;
+}
+
+/* ******************************     TABLE    ****************************** */
+
+.table {
+	width: 100%;
+	border: 1px solid #BBB;
+
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	    -ms-border-radius: 2px;
+			border-radius: 2px;
+}
+.table.full {
+	border-left: 0;
+	border-right: 0;
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+	    -ms-border-radius: 0;
+			border-radius: 0;
+}
+
+.table table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table th {
+	padding: .75em .25em;
+	font-weight: bold;
+}
+
+.table tbody tr {border-top: 1px solid #BBB;}
+.table.strip tbody tr:nth-child(odd) {background-color: #F8F8F8;}
+.table.strip tbody tr:nth-child(even) {background-color: #FFF;}
+.table td {
+	padding: .5em .25em;
+	font-weight: normal;
+	text-align: left;
+}
+.table.full td:first-child {padding-left: 1em;}
+.table.full td:last-child {padding-right: 1em;}
+
+td.crush {
+	width: .1px;
+	white-space: nowrap;
+}
