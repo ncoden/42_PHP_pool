@@ -1,0 +1,24 @@
+
+<- Camera ----------------------------------------------------------------------
+
+An instance can be contructed with the following parameters:
+ - 'origin', the coordinates Vertex of the camera
+ - 'orientation', a rotation Matrix
+ - 'width', width (in pixels) of the rendered picture
+ - 'height', height (in pixels) of the rendered picture
+ -	OR 'ratio' (incompatible with with AND height)
+ - 'fov', the field of view (in degrees)
+ - 'near', the near clipping plane of the projection
+ - 'far', the far clipping plane of the projection
+
+|	$camera = new Camera( array( ... ) )
+
+The constructor return FALSE without theses values, if the width, height
+and ratio are given, or if the ratio is given without width or height.
+
+The Matrix instance propose the following method:
+|	watchVertex( Vertex $worldVertex )
+Transforms vertex "world" coordinates to "screen" coordonates from the camera
+point of view.
+
+---------------------------------------------------------------------- Camera ->
