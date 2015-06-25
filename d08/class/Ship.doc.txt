@@ -1,0 +1,16 @@
+
+<- Ship ----------------------------------------------------------------------
+
+Requiere values:
+ - 'model'
+ - 'owner'
+ - 'posX'
+ - 'posY'
+ - 'orientation'
+ - 'moving'
+ - 'pp'
+ - 'hull'
+ - 'shield'
+ - 'weapons': weapons properties on the ship
+
+---------------------------------------------------------------------- Ship ->

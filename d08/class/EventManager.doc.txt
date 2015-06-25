@@ -1,0 +1,7 @@
+<- EventManager ----------------------------------------------------------------------
+
+--- Method ---------------------------------------------------------------------------
+Trigger = Add element to the table event.
+Check = Check if they have new events that occurs after the trigger.
+ 
+---------------------------------------------------------------------- EventManager ->

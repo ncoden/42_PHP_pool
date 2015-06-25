@@ -1,0 +1,14 @@
+
+<-----------------------Weapon
+
+=== Constructor ===
+
+This class provides all properties
+of Weapon. It inherits from
+-WeaponModel Class.
+-position X: posX;
+-position Y: posY;
+-charge : charge;
+-orientation : orientation;
+-Object: weapon_model;
+------------------------------->

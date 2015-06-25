@@ -1,0 +1,31 @@
+<- DataBase ----------------------------------------------------------------------
+
+ === Methods ===
+|	::init( array $kwargs )
+Save the database connection datas into the class
+
+|	::connect()
+Return a unique PDO instance
+
+|	::req( $sql, $datas )
+Execute a sql command with the associated datas, and return the result
+
+|	::select( $table, $id, array $values )
+Select the requested values in database.
+Require :	- $table, the table name
+			- $id, the row id
+			- $values, the list of fields
+If 'values' isn't given, select all the fields.
+
+|	::update( $table, $id, array $values )
+Update the $id row in database, with $values.
+Require :	- $table, the table name
+			- $id, the row id
+			- $values, row and values associative array
+
+|	::insert( $table, $datas )
+Insert $datas in the given table.
+Require :	- $table, the table name,
+			- $datas, row and values associative array
+ 
+---------------------------------------------------------------------- DataBase ->

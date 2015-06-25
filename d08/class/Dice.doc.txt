@@ -1,0 +1,24 @@
+
+<- Dice ----------------------------------------------------------------------
+
+ === Constructor ===
+
+This class provides us with a way to perform dice rolls. There are several methods that allow us to handle each type of roll request
+
+Required values:
+No instances are required for this class. Class methods are accessed statically.
+
+const DICE_MAX is set by default to 6.
+
+ === Methods ===
+
+	static public function		toss()
+	- returns an INT value for a dice roll between 1 and DICE_MAX
+
+	static public function		multi_toss($numtoss = 0)
+	- returns an array of multiple dice throws based on number of throws ($numtoss INT), that contains values of the results of each throw.
+
+	static public function		min_toss($min = 0, $n = 0)
+	- returns TRUE or FALSE, if a dice throw value managed to be greater than $min (INT), based on $n (INT) throws.
+
+---------------------------------------------------------------------- Dice ->

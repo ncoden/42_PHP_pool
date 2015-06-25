@@ -1,0 +1,15 @@
+
+<-----------------------WeaponModel
+
+=== Constructor ===
+
+This class provides all properties
+of WeaponModel.
+-name
+-short_range
+-medium_range
+-long_range
+-dispersion
+-default_charge
+-width (width of the shot)
+------------------------------->
