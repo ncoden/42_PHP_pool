@@ -1,0 +1,15 @@
+
+<- ShipModel ----------------------------------------------------------------------
+
+Requiere values:
+ - 'width'
+ - 'height'
+ - 'sprite'
+ - 'default_pp'
+ - 'default_hull'
+ - 'default_shield'
+ - 'inerty'
+ - 'speed'
+ - 'weapons' : weapons properties on this ship model
+
+---------------------------------------------------------------------- ShipModel ->

@@ -1,0 +1,25 @@
+
+<- Element ----------------------------------------------------------------------
+ This class stores data for an element in 1 Map tile.
+
+Required values:
+private		$_id; 
+	-The id of the element relative to map ID
+private		$_type;
+	-The type of element. Depends on map config/
+private		$_posX;
+	-The x position on the map grid
+private		$_posY;
+	-The y position on the map grid
+private		$_width;
+	-The width of the element in terms of pixels x map_tiles
+private		$_height;
+	-The height of the element in terms of pixels x map_tiles
+private		$_map_id;
+	-The map id that this element belongs to.
+
+ === Methods ===
+	There are only getter methods for each variable.
+	Some variables have setter methods, including $_posX, $_posY, $_width, $_height, $_type
+ 
+---------------------------------------------------------------------- Element ->

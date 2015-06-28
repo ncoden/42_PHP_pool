@@ -1,0 +1,72 @@
+
+<- Map ----------------------------------------------------------------------
+
+ This class generates a 2D map for 2 players in an asteroid field.
+
+Required values:
+private static	$_map_id;
+	- This is the map id of this map. Use it 
+private			$_map_width;
+	- The map width in terms of map_tiles.	
+private			$_map_height;
+	- The map height in terms of map_tiles.
+private			$_map_p1_zone_posX;
+	- The player zone x position for Player 1
+private			$_map_p1_zone_posY;
+	- The player zone y position for Player 1
+private			$_map_p2_zone_posX;
+	- The player zone x position for Player 2
+private			$_map_p2_zone_posY;
+	- The player zone y position for Player 2
+private			$_map_p_zone_width;
+	- The player zone height in terms of map_tiles.
+private			$_map_p_zone_height;
+	- The player zone width in terms of map_tiles.
+private			$_map_tile_width;
+	- The map tile width in terms of pixel.
+private			$_map_tile_height;
+	- The map tile height in terms of pixel.
+private			$_map_elements;
+	-The 2D Array storing Elements.class.php
+private			$TILE_EMPTY;
+	- Empty space texture (or none, depending on how we program the game)
+private			$TILE_ASTEROID;
+	- Asteroid texture, that may take up to more than 1 tile. (The rest is counted as 'occupied' or no render)
+private			$TILE_P1;
+	- Player 1 Zone Texture
+private			$TILE_P2;
+	- Player 2 Zone Texture
+
+All the above values need to be stored in an SQL Server Database, except for $_map_elements itself.
+This is because $_map_elements is a 2d array of Element.class.php values.
+
+I am unsure if the below values need to be stored:
+private			$_asteroid_probability;
+private			$_element_types;
+	- An array with the following values:
+	'p1' => 0		- Player 1 area
+	'p2' => 1		- Player 2 area
+	'empty' => 2	- Empty zones (Space)
+	'asteroid' => 3	- Asteroid area
+	'occupied' => 4	- Area that is occupied by an asteroid/other object (for now, only asteroids)
+
+How to use:
+  $m_game = new Game();
+  $m_game->GenerateMap();
+
+  To render the map, you either call $m_game->RenderMap(); 
+  or $m_game->RenderMap2(); The differences are explained below:
+
+ === Methods ===
+
+	public function				GenerateMap()
+	- Generate map based on parameters stored in class.
+	private function			CheckOccupied()
+	- Check for generated asteroids, and see if they clash with any zones other than 'empty'.
+	public function				RenderMap()
+	- Render example map using tables method. Does not support multiple asteroid sizes.
+	public function				RenderMap2()
+	- Render example map using div method. Supports mutiple sizes for asteroids. USE THIS ONE
+	public static function		SaveMapInDatabase($theMap)
+	- unused and unfinished function as of now.	
+---------------------------------------------------------------------- Game ->

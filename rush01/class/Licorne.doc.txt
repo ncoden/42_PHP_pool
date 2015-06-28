@@ -1,0 +1,20 @@
+
+<- Licorne ----------------------------------------------------------------------
+
+ Detect the collision between every elements in the map.
+ Move an element from position A to position B.
+ If two elements collides, inflict damage to elements.
+
+
+ === Methods ===
+
+	moveTo($x, $y):
+	-  Move an element from position A to position B.
+
+	checkCollision($xmin, $ymin, $xmax, $ymax, $map):
+	- Detect the collision between every elements in the map.
+
+	static public function		min_toss($min = 0, $n = 0)
+	- returns TRUE or FALSE, if a dice throw value managed to be greater than $min (INT), based on $n (INT) throws.
+
+---------------------------------------------------------------------- Licorne ->

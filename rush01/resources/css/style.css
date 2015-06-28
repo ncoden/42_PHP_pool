@@ -1,0 +1,49 @@
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url('/resources/bg/bg1.jpg');
+	background-position: top center;
+	background-repeat: none;
+	color: white;
+	font-size: 16px;
+	font-family: sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.box {
+	display: inline-block;
+	padding: .5em;
+	border: 1px solid black;
+	background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/low_contrast_linen.png") repeat scroll 0% 0% #333;
+}
+
+.zone {
+	padding: 1em;
+	border: 1px solid black;
+	background-color: rgba(0,0,0,.5);
+	border-radius: .25em;
+}
+
+.button {
+	padding: .33em .5em;
+	border: 1px solid black;
+	background-color: white;
+	border-radius: .25em;
+	box-shadow: 0 1px 5px rgba(0,0,0,.5);
+	color: black;
+	font-size: .87em;
+}
