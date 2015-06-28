@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<title>calc</title>
+	</head>
+	<body>
+	<form action="calc.html" method="GET">
+		<input type="text" name="left"/>
+		<select name="op">
+			<option value="plus" selected>+</option>
+			<option value="minus">-</option>
+			<option value="div">/</option>
+			<option value="mult">*</option>
+			<option value="modulo">%</option>
+		</select>
+		<input type="text" name="right"/>
+		<input type="submit" name="submit" value="Try me!"/>
+	</form>
+	</body>
+</html>
+
+<script type="text/javascript">
+
+	function time_popup() {
+		alert("Please, use me...");
+	}
+
+	var url = document.location.search.substr(1);
+	var result = {};
+//	var timer = setInterval("time_popup()" , 30000);
+	url.split("&").forEach(function(part)
+	{
+		var item = part.split("=");
+		result[item[0]] = decodeURIComponent(item[1]);
+	});
+	var op1 = parseFloat(result.left);
+	var op2 = parseFloat(result.right);
+	if (op1 && op2)
+	{
+		if (op1 < 0 || op2 < 0 || Number.isInteger(op1) == false || Number.isInteger(op2) == false)
+			res = "Error :(";
+		else if (result.op == "plus")
+			res = op1 + op2;
+		else if (result.op == "minus")
+			res = op1 - op2;
+		else if (result.op == "div")
+		{
+			if (op2 == 0)
+				res = "It\'s over 9000!"
+			else
+				res = op1 / op2;
+		}
+		else if (result.op == "mult")
+			res = op1 * op2;
+		else if (result.op == "modulo")
+		{
+			if (op2 == 0)
+				res = "It\'s over 9000!";
+			else
+				res = op1 % op2;
+		}
+		console.log(res);
+		alert(res);
+	}
+</script>
+
+<style>
+
+</style>

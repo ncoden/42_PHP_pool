@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<title>balloon</title>
+	</head>
+	<body>
+		<div id="balloon" onclick="jsclick()" onmouseout="jsout()"></div>
+	</body>
+</html>
+
+<script type="text/javascript">
+
+var ball = document.getElementById('balloon');
+ball.style.background = "red";
+
+function jsclick()
+{
+	var os = ball.offsetWidth + 10;
+	ball.style.width = os + "px";
+	ball.style.height = os + "px";
+	if (os > 420)
+	{
+		ball.style.width = "200px";
+		ball.style.height = "200px";
+	}
+	if (ball.style.background == "red")
+		ball.style.background = "green";
+	else if (ball.style.background == "green")
+		ball.style.background = "blue";
+	else if (ball.style.background == "blue")
+		ball.style.background = "red";
+}
+
+function jsout()
+{
+	var os = ball.offsetWidth - 5;
+	ball.style.width = os + "px";
+	ball.style.height = os + "px";
+	if (os < 200)
+	{
+		ball.style.width = "200px";
+		ball.style.height = "200px";
+	}
+	if (ball.style.background == "blue")
+		ball.style.background = "green";
+	else if (ball.style.background == "green")
+		ball.style.background = "red";
+	else if (ball.style.background == "red")
+		ball.style.background = "blue";
+}
+
+</script>
+
+<style>
+	#balloon {
+		width: 200px;
+		height: 200px;
+		background: red;
+		border-radius: 100%;
+	}
+</style>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<title>calc</title>
+		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	</head>
+	<body>
+	<form action="calc.html" method="GET">
+		<input type="text" name="left"/>
+		<select name="op">
+			<option value="1" selected>+</option>
+			<option value="2">-</option>
+			<option value="3">/</option>
+			<option value="4">*</option>
+			<option value="5">%</option>
+		</select>
+		<input type="text" name="right"/>
+		<input type="submit" name="submit" value="Try me!"/>
+	</form>
+	</body>
+</html>
+
+<script>
+
+	function isInt(n) {
+		return n % 1 == 0;
+	}
+
+	function time_popup() {
+		alert("Please, use me...");
+	}
+	var timer = setInterval("time_popup()" , 30000);
+	$.urlParam = function(name) {
+		var results = new RegExp('[\?&amp;]' + name + '=([^&amp;#]*)').exec(window.location.href);
+		return results[1] || 0;
+	}
+	var res;
+	if ($.urlParam('left') && $.urlParam('right'))
+	{
+		var op1 = parseFloat($.urlParam('left'));
+		var op2 = parseFloat($.urlParam('right'));
+		var pokemon = parseFloat($.urlParam('op'));
+
+		if (op1 < 0 || op2 < 0 || isInt(op1) == false || isInt(op2) == false)
+			res = "Error :(";
+		else if (pokemon == 1)
+			res = op1 + op2;
+		else if (pokemon == 2)
+			res = op1 - op2;
+		else if (pokemon == 3)
+		{
+			if (op2 == 0)
+				res = "It\'s over 9000!"
+			else
+				res = op1 / op2;
+		}
+		else if (pokemon == 4)
+			res = op1 * op2;
+		else if (pokemon == 5)
+		{
+			if (op2 == 0)
+				res = "It\'s over 9000!";
+			else
+				res = op1 % op2;
+		}
+		console.log(res);
+		alert(res);
+	}
+</script>

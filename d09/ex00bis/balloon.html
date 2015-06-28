@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>balloonBis</title>
+		<style>
+			#balloon {
+			width: 200px;
+			height: 200px;
+			background: red;
+			border-radius: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="balloon"></div>
+		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script>
+		var ball = $("#balloon");
+		ball.css("background-color", "red");
+		ball.click(function(){
+			var os = ball.width() + 10;
+			ball.css("width", os + "px");
+			ball.css("height", os + "px");
+			if (os > 420)
+			{
+				ball.css("width", "200");
+				ball.css("height", "200");
+			}
+			console.log(ball.css("background-color"));
+			if (ball.css("background-color") == 'rgb(255, 0, 0)')
+				ball.css("background-color", 'rgb(0, 128, 0)');
+			else if (ball.css("background-color") == 'rgb(0, 128, 0)')
+				ball.css("background-color", "blue");
+			else if (ball.css("background-color") == 'rgb(0, 0, 255)')
+				ball.css("background-color", "red");
+		});
+
+		ball.mouseout(function(){
+			var os = ball.width() - 5;
+			ball.css("width", os + "px");
+			ball.css("height", os + "px")
+			if (os < 200)
+			{
+				ball.css("width", "200");
+				ball.css("height", "200");
+			}
+			if (ball.css("backgroundColor") == 'rgb(0, 0, 255)')
+				ball.css("background-color", "green");
+			else if (ball.css("backgroundColor") == 'rgb(0, 128, 0)')
+				ball.css("background-color", "red");
+			else if (ball.css("backgroundColor") == 'rgb(255, 0, 0)')
+				ball.css("background-color", "blue");
+		});
+		</script>
+	</body>
+</html>
