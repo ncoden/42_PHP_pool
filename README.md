@@ -1,6 +1,6 @@
 42_PHP_pool
 =====
-42 school - PHP pool
+42 Project - PHP pool
 
 #### About
 PHP Pool of the [42 school](http://42.fr).
